@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("totalSolvedCard").textContent = totalSolved;
         document.getElementById("totalQuestionCard").textContent = totalQuestions;
-        document.getElementById("totalSubmissionCard").textContent = parsedData.totalSubmissions[0].submissions;
+        document.getElementById("totalSubmissionCard").textContent = parsedData.totalSolved;
         updateProgress(
             easySolved,
             totalEasy,
