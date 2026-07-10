@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Progress</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>LeetCode Progress</h1>
+        </div>
+        <div class="users">
+           <p>Enter your username:</p>
+            <div class="inputContainer">
+                <input type="text" placeholder="enter here......" id="uid">
+                <button type="submit" id="search">See Progress</button>
+            </div>
+        </div>
+        <div class="stats hidden" id="stats" >
+            <div class="progress">
+                <div class="stats-container">
+                    <div class="easy-container circle">
+                        <span id="easy-label"></span>
+                        Easy
+                    </div>
+                    <div class="medium-container circle">
+                        <span id="medium-label"></span>
+                        Medium
+                    </div>
+                    <div class="hard-container circle">
+                        <span id="hard-label"></span>
+                        Hard
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="stats-card hidden" id="stats-card">
+
+    <div class="card easy-card">
+        <h3>😒 Easy</h3>
+
+        <div class="card-item">
+            <span>Solved</span>
+            <span id="easySolvedCard"></span>
+        </div>
+
+        <div class="card-item">
+            <span>Submissions</span>
+            <span id="easySubmissionCard"></span>
+        </div>
+    </div>
+
+    <div class="card medium-card">
+        <h3> 😊  Medium</h3>
+
+        <div class="card-item">
+            <span>Solved</span>
+            <span id="mediumSolvedCard"></span>
+        </div>
+
+        <div class="card-item">
+            <span>Submissions</span>
+            <span id="mediumSubmissionCard"></span>
+        </div>
+    </div>
+
+    <div class="card hard-card">
+        <h3> 💀 Hard</h3>
+
+        <div class="card-item">
+            <span>Solved</span>
+            <span id="hardSolvedCard"></span>
+        </div>
+
+        <div class="card-item">
+            <span>Submissions</span>
+            <span id="hardSubmissionCard"></span>
+        </div>
+    </div>
+
+    <div class="card overall-card">
+
+        <h3>📈 Overall</h3>
+
+        <div class="card-item">
+            <span>Total Solved</span>
+            <span id="totalSolvedCard"></span>
+        </div>
+
+        <div class="card-item">
+            <span>Total Questions</span>
+            <span id="totalQuestionCard"></span>
+        </div>
+
+        <div class="card-item">
+            <span>Total Submissions</span>
+            <span id="totalSubmissionCard"></span>
+        </div>
+
+    </div>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
