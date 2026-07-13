@@ -77,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function displayData(parsedData) {
 
-        const totalQuestions = parsedData.totalQuestions;
-        const totalSolved = parsedData.totalSolved;
-        const totalSolvedSubmission = parsedData.totalSubmissions[0].submissions;
+        const tq = parsedData.totalQuestions;
+        const ts = parsedData.totalSolved;
+        const tss = parsedData.totalSubmissions[0].submissions;
 
         const totalEasy = parsedData.totalEasy;
         const easySolved = parsedData.easySolved;
@@ -98,9 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("hardSolvedCard").textContent = hardSolved;
         document.getElementById("hardSubmissionCard").textContent = parsedData.totalSubmissions[3].submissions;
 
-        document.getElementById("totalSolvedCard").textContent = totalSolved;
-        document.getElementById("totalQuestionCard").textContent = totalQuestions;
-        document.getElementById("totalSubmissionCard").textContent = totalSolvedSubmission;
+        document.getElementById("totalSolvedCard").textContent = ts;
+        document.getElementById("totalQuestionCard").textContent = tq;
+        document.getElementById("totalSubmissionCard").textContent = tss;
         updateProgress(
             easySolved,
             totalEasy,
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
             hardProgressCircle
         );
 
-        console.log(`Solved ${totalSolved} out of ${totalQuestions}`);
+        console.log(`Solved ${ts} out of ${tq}`);
     }
 
     searchButton.addEventListener("click", async function () {
