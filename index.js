@@ -97,13 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("hardSolvedCard").textContent = hardSolved;
         document.getElementById("hardSubmissionCard").textContent = parsedData.totalSubmissions[3].submissions;
 
-        document.getElementById("totalSolvedCard").textContent =
-        parsedData.totalSubmissions[3].submissions +
-        parsedData.totalSubmissions[2].submissions +
-        parsedData.totalSubmissions[1].submissions;
+        document.getElementById("totalSolvedCard").textContent = parsedData.totalSolved
+        
 
         document.getElementById("totalQuestionCard").textContent = totalQuestions;
-        document.getElementById("totalSubmissionCard").textContent = parsedData.totalSolved;
+        document.getElementById("totalSubmissionCard").textContent = parsedData.totalSubmissions[3].submissions +
+        parsedData.totalSubmissions[2].submissions +
+        parsedData.totalSubmissions[1].submissions;
         updateProgress(
             easySolved,
             totalEasy,
