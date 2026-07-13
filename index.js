@@ -78,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayData(parsedData) {
 
         const totalQuestions = parsedData.totalQuestions;
-        const totalSolved = parsedData.totalSubmissions[0].count;
+        const totalSolved = parsedData.totalSolved;
+        const totalSolvedSubmission = parsedData.totalSubmissions[0].submissions;
 
         const totalEasy = parsedData.totalEasy;
         const easySolved = parsedData.easySolved;
@@ -97,9 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("hardSolvedCard").textContent = hardSolved;
         document.getElementById("hardSubmissionCard").textContent = parsedData.totalSubmissions[3].submissions;
 
-        document.getElementById("totalSolvedCard").textContent = parsedData.totalSolved;
-        document.getElementById("totalQuestionCard").textContent = parsedData.totalQuestions;
-        document.getElementById("totalSubmissionCard").textContent = parsedData.totalSubmissions[0].submissions;
+        document.getElementById("totalSolvedCard").textContent = totalSolved;
+        document.getElementById("totalQuestionCard").textContent = totalQuestions;
+        document.getElementById("totalSubmissionCard").textContent = totalSolvedSubmission;
         updateProgress(
             easySolved,
             totalEasy,
